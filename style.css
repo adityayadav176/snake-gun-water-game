@@ -47,7 +47,6 @@ nav {
     gap: 1rem;
     justify-content: center;
     align-items: center;
-    background: white;
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -59,10 +58,8 @@ nav {
     display: flex;
     justify-content: space-around;
     gap: 5rem;
-    background-color: #fff;
     padding: 0.5rem 5rem;
     border-radius: 1rem;
-
 }
 
 .Images {
@@ -92,11 +89,11 @@ nav {
 #gameBtn:hover {
     background-color: rgb(31, 197, 191);
     color: black;
-     transform: scale(1.05);
+    transform: scale(1.05);
 }
 
-.box{
-    background-color: #1e9aa1;
+.box {
+    background: linear-gradient(200deg, #315e85, #1e9aa1);
     padding: 1rem;
     border-radius: 1rem;
     height: 5vh;
@@ -108,26 +105,29 @@ body.dark {
     color: #00c6ff;
 }
 
-body.dark .icons{
+body.dark .icons {
     color: white
 }
 
-body.dark .nav{
-  background: #080606;
-  color: #fff;
+body.dark .nav {
+    background: #080606;
+    color: #fff;
 }
+
 body.dark .gameContainer {
     background: #080606;
     box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
     color: #00c6ff;
 }
 
-body.dark .scoreContainer{
+body.dark .scoreContainer {
     background-color: black;
 }
 
-body.dark .box{
-   background: linear-gradient(200deg, #315e85, #1e9aa1);
+body.dark .box {
+    background: linear-gradient(200deg, #315e85, #1e9aa1);
 }
 
-
+body.dark .gameBtn{
+    background-color: #00c6ff;
+}
