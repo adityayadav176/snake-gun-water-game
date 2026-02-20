@@ -25,7 +25,11 @@ gameBtn.addEventListener("click", () => {
             alert("Invalid input!");
             continue;
         }
-
+          // 2️⃣ Check draw
+        if (UserInput === ComputerInput) {
+            alert("Game was drawn");
+            drawn++;
+        }
       
 
       
