@@ -31,7 +31,8 @@ gameBtn.addEventListener("click", () => {
         if (UserInput === ComputerInput) {
             alert("Game was drawn");
             drawn++;
-            
+            Moves--;
+            continue;
         }
 
         // 3️⃣ Check winner
