@@ -2,12 +2,11 @@ const gameBtn = document.getElementById("gameBtn");
 const drawnF = document.getElementById("Drawn");
 const ScoreF = document.getElementById("Score");
 const loseF = document.getElementById("lose");
-const icons1 = document.querySelector(".fa-sun");
-const btn = document.querySelector(".iconBtn");
+const icon = document.querySelector(".icons")
 
 
 gameBtn.addEventListener("click", () => {
-     alert("hello")
+    alert("hello")
     let arr = ["snake", "water", "gun"];
     let score = 0;
     let drawn = 0;
@@ -50,6 +49,19 @@ gameBtn.addEventListener("click", () => {
     }
 
 });
+
+
+
+icon.addEventListener("click", () => {
+   let Theme =  document.body.classList.toggle("dark")
+    if (Theme) {
+        icon.innerText = "Light"
+    }else{
+        icon.innerText = "Dark"
+    }
+})
+
+
 
 
 
