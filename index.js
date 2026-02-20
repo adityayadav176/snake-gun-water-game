@@ -30,6 +30,15 @@ gameBtn.addEventListener("click", () => {
             alert("Game was drawn");
             drawn++;
         }
+
+          // 3️⃣ Check winner
+        if ((UserInput === "snake" && ComputerInput === "water") || (UserInput === "gun" && ComputerInput === "snake") || (UserInput === "water" && ComputerInput === "gun")) {
+            alert(`Hurray You Won The Game ${UserInput} Beats ${ComputerInput}`);
+            score++;
+        } else {
+            alert(`Aww! You Loose ${ComputerInput} Beats ${UserInput}`);
+            beat++;
+        }
       
 
       
