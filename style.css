@@ -1,38 +1,71 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url(assest/image.png);
-    width: 100vw;
+    min-height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(200deg, #315e85, #1e9aa1, #fff);
+    color: #222;
+    transition: 0.4s ease;
 }
 
-.gameContainer{
-    background: linear-gradient(135deg, #667eea, #764ba2);
+
+nav {
+    background: linear-gradient(200deg, #0c5ba0, #09595e, #0c5ba0);
+    height: 60px;
+    width: 98.2%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.icons {
+    border-radius: 50%;
+    padding: 0.2rem;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+}
+
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameContainer {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background: white;
     padding: 2rem;
-    display: flex;
-    flex-direction: column;   /* 👈 ADD THIS */
-    gap: 1rem;                /* spacing between items */
-    border-radius: 12px;
-    justify-content: center;
-    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
 }
 
-.scoreContainer{
+
+.scoreContainer {
     display: flex;
     justify-content: space-around;
     gap: 5rem;
     background-color: #fff;
     padding: 0.5rem 5rem;
     border-radius: 1rem;
+
 }
 
-.Images{
+.Images {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -45,14 +78,53 @@ body{
     object-fit: cover;
 }
 
-#gameBtn{
+#gameBtn {
     padding: 0.5rem 10rem;
     border-radius: 1rem;
     border: none;
     transition: 0.6s;
 }
 
-#gameBtn:hover{
-    background-color: purple;
-    color: #fff;
+#gameBtn:hover {
+    background-color: rgb(31, 197, 191);
+    color: black;
 }
+
+/* Button */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.box{
+    background-color: #1e9aa1;
+    padding: 1rem;
+    border-radius: 1rem;
+    height: 5vh;
+    width: 3vw;
+}
+
+
+/* body.dark {
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+body.dark .gameContainer {
+    background: #1f1f1f;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+}
+
+body.dark button {
+    background: #00c6ff;
+    color: black;
+} */
