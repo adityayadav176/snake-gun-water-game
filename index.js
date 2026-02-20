@@ -6,20 +6,6 @@ const icons1 = document.querySelector(".fa-sun");
 const btn = document.querySelector(".iconBtn");
 
 
-btn.addEventListener("click", (e) => {
-    if (e.target.id === "sun") {
-
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
-
-        // change sun back to moon
-        e.target.classList.remove("fa-sun");
-        e.target.classList.add("fa-moon");
-
-        e.target.id = "moon";
-    }
-})
-
 gameBtn.addEventListener("click", () => {
      alert("hello")
     let arr = ["snake", "water", "gun"];
