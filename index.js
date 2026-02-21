@@ -27,7 +27,13 @@ gameBtn.addEventListener("click", () => {
             alert("Invalid input!");
             continue;
         }
-       
+        // 2️⃣ Check draw
+        if (UserInput === ComputerInput) {
+            alert("Game was drawn");
+            drawn++;
+            Moves--;
+            // continue;
+        }
 
         // 3️⃣ Check winner
         if ((UserInput === "snake" && ComputerInput === "water") || (UserInput === "gun" && ComputerInput === "snake") || (UserInput === "water" && ComputerInput === "gun")) {
