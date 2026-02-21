@@ -2,7 +2,8 @@ const gameBtn = document.getElementById("gameBtn");
 const drawnF = document.getElementById("Drawn");
 const ScoreF = document.getElementById("Score");
 const loseF = document.getElementById("lose");
-const icon = document.querySelector(".icons")
+// const icon = document.querySelector(".icons")
+const icon = document.getElementById("themeIcon");
 
 
 gameBtn.addEventListener("click", () => {
@@ -31,7 +32,7 @@ gameBtn.addEventListener("click", () => {
             alert("Game was drawn");
             drawn++;
             Moves--;
-            continue;
+            // continue;
         }
 
         // 3️⃣ Check winner
@@ -52,16 +53,20 @@ gameBtn.addEventListener("click", () => {
 
 
 
+// icon.addEventListener("click", () => {
+//    let Theme =  document.body.classList.toggle("dark")
+//     if (Theme) {
+//         icon.innerText = "Light"
+//     }else{
+//         icon.innerText = "Dark"
+//     }
+// })
+
 icon.addEventListener("click", () => {
-   let Theme =  document.body.classList.toggle("dark")
-    if (Theme) {
-        icon.innerText = "Light"
-    }else{
-        icon.innerText = "Dark"
-    }
-})
-
-
+    document.body.classList.toggle("dark");
+    icon.classList.toggle("fa-moon");
+    icon.classList.toggle("fa-sun");
+});
 
 
 
