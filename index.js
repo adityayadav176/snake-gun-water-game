@@ -4,15 +4,15 @@ const ScoreF = document.getElementById("Score");
 const loseF = document.getElementById("lose");
 // const icon = document.querySelector(".icons")
 const icon = document.getElementById("themeIcon");
+let score = 0;
+let drawn = 0;
+let Moves = 10;
+let beat = 0;
 
 
 gameBtn.addEventListener("click", () => {
     alert("hello")
     let arr = ["snake", "water", "gun"];
-    let score = 0;
-    let drawn = 0;
-    let Moves = 10;
-    let beat = 0;
 
     while (Moves > 0) {
         // INPUTS
@@ -22,9 +22,14 @@ gameBtn.addEventListener("click", () => {
 
         UserInput = UserInput.toLowerCase().trim();
 
+        if (UserInput === null) {
+            alert("Game cancelled");
+            break;
+        }
+
         // 1️⃣ Check invalid input
-        if (!arr.includes(UserInput) || !arr.includes(ComputerInput)) {
-            alert("Invalid input!");
+        if (!arr.includes(UserInput)) {
+            alert("Invalid input! Please enter snake, water or gun.");
             continue;
         }
         // 2️⃣ Check draw
@@ -32,9 +37,11 @@ gameBtn.addEventListener("click", () => {
             alert("Game was drawn");
             drawn++;
             Moves--;
-            // continue;
+            drawnF.innerText = drawn;
+            ScoreF.innerText = score;
+            loseF.innerText = beat;
+            continue; // ✅ STOP here if draw
         }
-
         // 3️⃣ Check winner
         if ((UserInput === "snake" && ComputerInput === "water") || (UserInput === "gun" && ComputerInput === "snake") || (UserInput === "water" && ComputerInput === "gun")) {
             alert(`Hurray You Won The Game ${UserInput} Beats ${ComputerInput}`);
